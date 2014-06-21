@@ -3,7 +3,6 @@ package rafb3.todolist;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class MainActivity extends ListActivity
 {
@@ -14,9 +13,8 @@ public class MainActivity extends ListActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         list = new TodoList(this);
-        input = new TodoInput((EditText) findViewById(R.id.taskInput));
+        input = new TodoInput(this, R.id.taskInput);
     	setListAdapter(list.getAdapter());
-
     }
 
     TodoInput input;
