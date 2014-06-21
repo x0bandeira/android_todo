@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import android.content.Context;
-import android.widget.ListAdapter;
+import android.app.ListActivity;
 import android.widget.SimpleAdapter;
 
 public class TodoList {
@@ -13,16 +12,13 @@ public class TodoList {
     SimpleAdapter adapter; 
     List<HashMap<String, String>> list;
 
-	public TodoList(Context view) {
+	public TodoList(ListActivity view) {
 		list = new ArrayList<HashMap<String, String>>();
     	adapter = new SimpleAdapter(view, list,
     			R.layout.task,
     			new String[] { "description" },
     			new int[] { R.id.taskDescription });
-	}
-
-	public ListAdapter getAdapter() {
-		return adapter;
+    	view.setListAdapter(adapter);
 	}
 
 	public void add(String value) {

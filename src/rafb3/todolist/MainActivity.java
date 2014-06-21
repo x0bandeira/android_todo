@@ -3,6 +3,7 @@ package rafb3.todolist;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 public class MainActivity extends ListActivity
 {
@@ -14,7 +15,6 @@ public class MainActivity extends ListActivity
         setContentView(R.layout.main);
         list = new TodoList(this);
         input = new TodoInput(this, R.id.taskInput);
-    	setListAdapter(list.getAdapter());
     }
 
     TodoInput input;
@@ -24,4 +24,10 @@ public class MainActivity extends ListActivity
 		list.add(input.getValue());
     	input.clear();
     }
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		// TODO Auto-generated method stub
+		super.onListItemClick(l, v, position, id);
+	}
 }
