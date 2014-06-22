@@ -16,7 +16,8 @@ public class TodoItemView extends RelativeLayout implements OnTouchListener {
 
 	public TodoItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		LayoutInflater.from(context).inflate(R.layout.todo_item_view_children, this, true);
+		LayoutInflater.from(context).inflate(R.layout.todo_item_view_children,
+				this, true);
 	}
 
 	public void setModel(TodoItem item) {
@@ -25,9 +26,9 @@ public class TodoItemView extends RelativeLayout implements OnTouchListener {
 	}
 
 	public static TodoItemView inflate(ViewGroup parent) {
-		TodoItemView item = (TodoItemView) LayoutInflater
-				.from(parent.getContext())
-				.inflate(R.layout.todo_item_view, parent, false);
+		TodoItemView item = (TodoItemView) LayoutInflater.from(
+				parent.getContext()).inflate(R.layout.todo_item_view, parent,
+				false);
 		return item;
 	}
 

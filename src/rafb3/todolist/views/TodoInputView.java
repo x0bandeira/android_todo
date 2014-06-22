@@ -13,7 +13,7 @@ public class TodoInputView {
 	public String getValue() {
 		return el.getText().toString();
 	}
-	
+
 	public void clear() {
 		el.setText("");
 	}

@@ -4,34 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-	<LinearLayout android:orientation="horizontal"
-	    android:layout_width="match_parent"
-	    android:layout_height="45dp"
-	    android:background="#2112D9">
-		<EditText android:id="@+id/taskInput"
-		    android:layout_marginTop="4dp"
-		    android:layout_marginLeft="5dp"
-		        android:layout_weight="1"
-		        android:layout_width="0dp"
-		        android:layout_height="40dp"
-		        android:hint="@string/edit_message" />
-		<Button
-		        android:layout_width="50dp"
-		        android:layout_height="40dp"
-		    android:layout_marginRight="2dp"
-		        android:text="@string/button_save"
-		        android:onClick="saveTask" />
-	</LinearLayout>
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="fill_parent">
-	    <ListView
-	        android:id="@android:id/list"
-	        android:layout_weight="1"
-	        android:layout_width="0dp"
-	        android:layout_height="fill_parent"
-	    />
-	</LinearLayout>
-</LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#2112D9"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/taskInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:hint="@string/edit_message" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:onClick="saveTask"
+            android:text="@string/button_save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
