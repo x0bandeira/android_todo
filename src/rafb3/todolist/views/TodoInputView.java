@@ -1,12 +1,12 @@
-package rafb3.todolist;
+package rafb3.todolist.views;
 
 import android.app.Activity;
 import android.widget.EditText;
 
-public class TodoInput {
+public class TodoInputView {
 	EditText el;
 
-	public TodoInput(Activity ac, int elId) {
+	public TodoInputView(Activity ac, int elId) {
 		this.el = (EditText) ac.findViewById(elId);
 	}
 
